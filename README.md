@@ -39,11 +39,11 @@ alias ghdut='git log --pretty=format:"%h %s [%an at %aI]" --graph' #history deta
 ## 이메일 등록
 - github이나 bitbucket에 들어있는 이메일 등록
 - 각 사이트에서 여러 개의 이메일을 등록할 수 있음
-````
+```
 $ git config user.email myounghoon.kim@gmail.com
 $ git config user.email
 myounghoon.kim@gmail.com
-````
+```
 
 ## Fetch
 - 메인 원격저장소를 등록하여 모든 branch를 fetch
@@ -55,15 +55,16 @@ main  https://github.com/MyounghoonKim/githubflow-sample.git (push)
 origin  https://github.com/[somebody]/githubflow-sample.git (fetch)
 origin  https://github.com/[somebody]/githubflow-sample.git (push)
 $ git fetch main
-```
-- 샘플 커밋 메시지
-```
+
+ # sample commit message
+$ ghd
 *   f8210f6 Merge branch 'auth'
 |\
 | * ef821e4 update api
 | * 103b70d add user auth
 |/
 * fb8cc1a init commit
+```
 
 ## 소스코드 수정
 ### Feature branch 생성
@@ -75,8 +76,9 @@ $ git fetch main
 
 ### 커밋 & 푸시
 - 작업 후 커밋
-- 커밋로그 예)
 ```
+ # sample commit message
+$ ghd
 * 1005e94 update payment api
 * 03ac2ea add creditcard classifier
 *   f8210f6 Merge branch 'auth'
@@ -98,7 +100,7 @@ $ git fetch main
 
 ## 메인 원격저장소를 다시 Fetch
 - PR이 accept되면 업데이트된 메인 원격저장소를 바탕으로 개인 로컬저장소/원격저장소를 업데이트
-````
+```
 $ gco main/master
 $ ghd
 *   22983c4 Merge pull request #1 from lumcontributor/infra-payment
@@ -115,3 +117,4 @@ $ ghd
 $ gco master
 $ git merge main/master
 $ git push origin master
+```
