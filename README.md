@@ -101,7 +101,7 @@ $ ghd
 ## 메인 원격저장소를 다시 Fetch
 - PR이 accept되면 업데이트된 메인 원격저장소를 바탕으로 개인 로컬저장소/원격저장소를 업데이트
 ```
-$ gco main/master
+$ git fetch main
 $ ghd
 *   22983c4 Merge pull request #1 from lumcontributor/infra-payment
 |\
